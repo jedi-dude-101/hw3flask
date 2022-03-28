@@ -9,7 +9,7 @@ def home():
 	return f'''
 	<html>
 	<body>
-		<h1>Welcome {name} </h1>
+		<h1>Welcome {name}!</h1>
 		<a href="www.google.com">not google</a>
 	<ul>
 	<li>{city_names[0]}</li>
