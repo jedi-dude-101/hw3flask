@@ -9,7 +9,7 @@ def home():
 	<html>
 	<body>
 		<h1>Welcome '''+ name + '''</h1>
-		<a href="https://www.google.com">not google</a>
+		<a href="www.google.com">not google</a>
 		<ul>'''
 	for city in city_names:
 		html=html+"<li>"+city+"</li>"
