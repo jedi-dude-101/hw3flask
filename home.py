@@ -1,23 +1,23 @@
 from flask import Flask
 myapp = Flask(__name__)
-
-name="jimbo"
+# help
+name="Lisa"
 city_names=["Paris","London","Rome","Tahiti"]
 
 @myapp.route("/")
 def home():
-	html= '''
+	return f'''
 	<html>
 	<body>
-		<h1>Welcome '''+ name + '''</h1>
+		<h1>Welcome {name} </h1>
 		<a href="www.google.com">not google</a>
-		<ul>'''
-	for city in city_names:
-		html=html+"<li>"+city+"</li>"
-	html=html+'''
+	<ul>
+	<li>{city_names[1]}</li>
+	<li>{city_names[2]}</li>
+	<li>{city_names[3]}</li>
+	<li>{city_names[4]}</li>
 	</ul>
 	</body>
 	</html>
 	'''
-	return html
 # myapp.run()
