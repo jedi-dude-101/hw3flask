@@ -6,7 +6,7 @@ from wtforms import StringField, SubmitField
 class LoginForm(FlaskForm):
 	city = StringField('City Name')
 	submit = SubmitField('Submit')
-city=None
+city_local=None
 name='Lisa'
 city_names=["Paris","London","Rome","Tahiti"]
 
@@ -15,7 +15,7 @@ city_names=["Paris","London","Rome","Tahiti"]
 def home():
 	form=LoginForm()
 	if form.validate_on_submit():
-		city=form.city.data
+		city_local=form.city.data
 		form.city.data=''
-	return render_template('home.html',name=name,city_names=city_names,form=form,city=city)
+	return render_template('home.html',name=name,city_names=city_names,form=form,city_local=city_local)
 
