@@ -6,13 +6,14 @@ from wtforms import StringField, SubmitField
 class LoginForm(FlaskForm):
 	city = StringField('City Name')
 	submit = SubmitField('Submit')
-city_local=""
+
 name='Lisa'
-city_names=["Paris","London","Rome","Tahiti"]
 
 
 @myobj.route('/', methods=['GET','POST'])
 def home():
+	city_local=None
+	city_names=["Paris","London","Rome","Tahiti"]
 	form=LoginForm()
 	if form.validate_on_submit():
 		city_local=form.city.data
