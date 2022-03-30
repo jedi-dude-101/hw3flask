@@ -6,7 +6,7 @@ from wtforms import StringField, SubmitField
 class LoginForm(FlaskForm):
 	city = StringField('City Name')
 	submit = SubmitField('Submit')
-city_local=None
+city_local=""
 name='Lisa'
 city_names=["Paris","London","Rome","Tahiti"]
 
