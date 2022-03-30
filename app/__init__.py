@@ -3,9 +3,9 @@ import os
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
-myapp_obj = Flask(__name__)
+myobj = Flask(__name__)
 
-myapp_obj.config.from_mapping(
+myobj.config.from_mapping(
     SECRET_KEY = 'you-will-never-guess',
 )
 
